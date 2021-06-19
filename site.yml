@@ -1,0 +1,15 @@
+---
+- name: setup standard setup for habbfarm servers
+  gather_facts: yes
+  remote_user: root
+  #remote_user: user
+  #become: yes
+  #become_method: sudo
+  hosts: test
+  vars_files: 
+    -  defaults/main.yml
+
+  roles:
+    - chronyd_client
+    - rsyslog_client
+    #- server-lite

@@ -1,0 +1,8 @@
+loghost: loghost01.no.habbfarm.net
+
+ntp_host01: ntp01.no.habbfarm.net
+ntp_host02: ntp02.no.habbfarm.net
+ntp_host03: ntp03.no.habbfarm.net
+
+proxy_server: hf-proxy.no.habbfarm.net
+proxy_port: 8888

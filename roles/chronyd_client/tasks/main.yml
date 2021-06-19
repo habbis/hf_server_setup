@@ -1,0 +1,21 @@
+---
+
+ - name: Install chrony
+   package:
+     name:
+       - chrony
+     state: present
+
+ - name: setup client ntp chronyd config 
+   ansible.builtin.template:
+     src: templates/chrony.conf.j2
+     dest: /etc/chrony.conf
+     owner: root
+     group: root
+     mode: '0644'
+
+ - name: restart of chronyd
+   service:
+     name: chronyd
+     state: restarted
+
