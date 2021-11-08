@@ -2,14 +2,18 @@
 - name: setup standard setup for habbfarm servers
   gather_facts: yes
   remote_user: root
-  #remote_user: user
+  #remote_user: xo
+  #remote_user: ansible
   #become: yes
-  #become_method: sudo
-  hosts: test
+  become_method: sudo
+  hosts: new
   vars_files: 
     -  defaults/main.yml
 
   roles:
+    -  apt
+    - yum_dnf
     - chronyd_client
-    - rsyslog_client
-    #- server-lite
+    #- rsyslog_client
+    - server-lite
+    - selinux

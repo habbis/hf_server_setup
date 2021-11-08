@@ -1,0 +1,11 @@
+---
+
+ - name: apt proxy config
+   ansible.builtin.template:
+     src: templates/proxy.conf.j2
+     dest: /etc/apt/apt.conf.d/proxy.conf
+     owner: root
+     group: root
+     mode: '0644'
+   #when: (ansible_distribution == "RedHat") or (ansible_distribution == "CentOS") or (ansible_distribution == "OracleLinux")
+   when: ansible_pkg_mgr == "apt"

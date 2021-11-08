@@ -1,8 +1,13 @@
 # Use public servers from the pool.ntp.org project.
 # Please consider joining the pool (http://www.pool.ntp.org/join.html).
-pool {{ ntp_host01 }} iburst
-pool {{ ntp_host02 }} iburst
-pool {{ ntp_host03 }} iburst
+#pool {{ ntp_host01 }} iburst
+#pool {{ ntp_host02 }} iburst
+#pool {{ ntp_host03 }} iburst
+
+
+server {{ ntp_host01 }} iburst
+server {{ ntp_host02 }} iburst
+server {{ ntp_host03 }} iburst
 
 # Record the rate at which the system clock gains/losses time.
 driftfile /var/lib/chrony/drift
