@@ -16,9 +16,3 @@ To run playbook with vault
 ```
 ansible-playbook site.yml --ask-vault-pass
 ```
-
-roles that are tested and are in use
-
-- [client](roles/client/tasks/main.yml)
-
-# hf_server_setup
